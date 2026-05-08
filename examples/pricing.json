@@ -1,0 +1,14 @@
+{
+  "defaultAmountUsd": 0.001,
+  "freeTier": { "callsPerDay": 0 },
+  "routes": {
+    "POST /mcp/generate_image": { "amountUsd": 0.05, "description": "Gemini text-to-image" },
+    "POST /mcp/edit_image": { "amountUsd": 0.08, "description": "Gemini image edit with reference" },
+    "POST /mcp/swarm_init": { "amountUsd": 0.002, "description": "Initialize coordination swarm" },
+    "POST /mcp/agent_spawn": { "amountUsd": 0.001, "description": "Spawn single agent" },
+    "POST /mcp/workflow_execute": { "amountUsd": 0.02, "description": "Run workflow (multi-agent)" },
+    "POST /mcp/neural_train": { "amountUsd": 0.10, "description": "Compute-heavy training run" },
+    "POST /mcp/security_scan": { "amountUsd": 0.05, "description": "CVE + code scan" },
+    "POST /mcp/memory_search": { "amountUsd": 0.003, "description": "HNSW vector search" }
+  }
+}

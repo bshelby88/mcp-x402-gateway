@@ -1,0 +1,60 @@
+{
+  "name": "mcp-x402-gateway",
+  "version": "0.1.0",
+  "description": "Drop-in x402 + Stripe + license-key paywall for any MCP server. Wrap stdio or HTTP MCP and start earning USDC per tool call.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-x402-gateway": "dist/cli.js"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/cli.ts",
+    "start": "node dist/cli.js",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "x402",
+    "usdc",
+    "stripe",
+    "paywall",
+    "monetization",
+    "agent-payments",
+    "claude-code",
+    "coinbase-cdp"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "helmet": "^8.0.0",
+    "stripe": "^17.0.0",
+    "undici": "^6.19.0",
+    "viem": "^2.21.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
