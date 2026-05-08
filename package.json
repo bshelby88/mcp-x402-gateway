@@ -18,8 +18,8 @@
     "build": "tsc -p tsconfig.json",
     "dev": "tsx watch src/cli.ts",
     "start": "node dist/cli.js",
-    "test": "vitest run",
-    "lint": "eslint src --ext .ts"
+    "test": "vitest run --passWithNoTests",
+    "lint": "tsc -p tsconfig.json --noEmit"
   },
   "keywords": [
     "mcp",
@@ -33,7 +33,13 @@
     "claude-code",
     "coinbase-cdp"
   ],
-  "author": "",
+  "author": "Bryant Shelby <jadedfocus@gmail.com>",
+  "homepage": "https://github.com/bshelby88/mcp-x402-gateway#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bshelby88/mcp-x402-gateway.git"
+  },
+  "bugs": { "url": "https://github.com/bshelby88/mcp-x402-gateway/issues" },
   "license": "MIT",
   "engines": {
     "node": ">=20.0.0"
